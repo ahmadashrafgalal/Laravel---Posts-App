@@ -97,8 +97,7 @@ class PostController extends Controller
         
         // $post->title = $data['title'];
         // $post->description = $data['description'];
-        // $post->save();
-
+        // $post->save();   
         // OR
 
         POST::where('id', $post_id)->update([
