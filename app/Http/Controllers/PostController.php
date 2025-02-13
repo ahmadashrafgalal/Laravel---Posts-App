@@ -76,7 +76,8 @@ class PostController extends Controller
         // Method 2
         Post::create([
             'title' => $data['title'],
-            'description' => $data['description']
+            'description' => $data['description'],
+            'user_id' => $data['post_creator']
         ]);
 
         return to_route('posts.index');
@@ -97,7 +98,7 @@ class PostController extends Controller
         
         // $post->title = $data['title'];
         // $post->description = $data['description'];
-        // $post->save();   
+        // $post->save();       
         // OR
 
         POST::where('id', $post_id)->update([
